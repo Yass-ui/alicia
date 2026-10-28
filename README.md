@@ -24,8 +24,8 @@ Desarrollo de tres aplicaciones web interactivas inspiradas en la obra *Alicia e
 ## Evidencias y Capturas de Pantalla
 
 ### Ejercicio 1: Poción Mágica
-> ![Captura Ejercicio 1](assets\image-2.png)
+> ![Captura Ejercicio 1](assets/image-2.png)
 ### Ejercicio 2: Merienda Loca
-> ![Captura Ejercicio 2](assets\image1.png)
+> ![Captura Ejercicio 2](assets/image1.png)
 ### Ejercicio 3: Desafío de la Reina
-> ![Captura Ejercicio 3](assets\image.png)
+> ![Captura Ejercicio 3](assets/image.png)
