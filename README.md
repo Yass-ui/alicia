@@ -6,7 +6,7 @@
 ## Enlaces de Entrega Obligatorios
 * **Página Publicada (GitHub Pages):** [https://yass-ui.github.io/alicia/]
 * **Repositorio Git (GitHub):** [https://github.com/Yass-ui/alicia.git]
-* **Video Explicativo:** [Pega aquí el enlace de tu video de YouTube o Drive]
+* **Video Explicativo:** [https://youtu.be/I6ZavHKq11k]
 
 ## Descripción del Proyecto
 Desarrollo de tres aplicaciones web interactivas inspiradas en la obra *Alicia en el país de las maravillas*, utilizando formularios HTML5, estilos CSS3 personalizados y JavaScript nativo. El proyecto fortalece las estructuras secuenciales, condicionales (`if/else`), de selección múltiple (`switch`), repetitivas (`for`), eventos del DOM y validación de entradas.
