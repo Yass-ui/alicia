@@ -1,29 +1,21 @@
-// ==========================================
-// EJERCICIO 1: La poción mágica de Alicia
-// ==========================================
 const formPocion = document.getElementById('formPocion');
 formPocion.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita la recarga de la página (RF-08)
+    event.preventDefault();
 
-    // Captura de datos usando getElementById y value (RF-03)
     const alturaInicialInput = document.getElementById('alturaInicial').value;
     const mlPocionInput = document.getElementById('mlPocion').value;
     const divResultado = document.getElementById('resultadoPocion');
 
-    // Conversión a tipo numérico
     const alturaInicial = parseFloat(alturaInicialInput);
     const mlPocion = parseFloat(mlPocionInput);
-    const alturaPuerta = 150; // Altura fija de referencia
+    const alturaPuerta = 150;
 
-    // Validación de entradas (RF-05)
     if (isNaN(alturaInicial) || isNaN(mlPocion) || alturaInicial <= 0 || mlPocion < 0) {
         divResultado.className = "resultado error";
         divResultado.textContent = "Error: Por favor ingrese valores numéricos válidos y positivos para la altura y la poción.";
         return;
     }
 
-    // Cálculo y procesamiento con estructuras condicionales (RF-04, RF-07)
-    // Regla: Nueva Altura = Altura Inicial + (ml * 0.5) - 5
     const nuevaAltura = calcularNuevaAltura(alturaInicial, mlPocion);
     
     let mensajeEstado = "";
@@ -38,7 +30,6 @@ formPocion.addEventListener('submit', function(event) {
         divResultado.className = "resultado error";
     }
 
-    // Mostrar resultados en la interfaz usando textContent (RF-03, RF-06)
     divResultado.innerHTML = `
         <strong>Altura Inicial:</strong> ${alturaInicial} cm<br>
         <strong>Poción Consumida:</strong> ${mlPocion} ml<br>
@@ -47,14 +38,11 @@ formPocion.addEventListener('submit', function(event) {
     `;
 });
 
-// Función propia para el Ejercicio 1 (RF-07)
 function calcularNuevaAltura(altura, pocion) {
     const factorCrecimiento = pocion * 0.5;
     const evaporacion = 5;
     return altura + factorCrecimiento - evaporacion;
 }
-
-
 // ==========================================
 // EJERCICIO 2: La merienda del Sombrerero Loco
 // ==========================================
@@ -69,28 +57,22 @@ formMerienda.addEventListener('submit', function(event) {
 
     const cantidad = parseInt(cantidadTazasInput, 10);
 
-    // Validaciones (RF-05)
     if (nombre === "" || bebida === "" || isNaN(cantidad) || cantidad <= 0 || cantidad > 20) {
         divResultado.className = "resultado error";
         divResultado.textContent = "Error: Verifique que el nombre no esté vacío, seleccione una bebida y la cantidad esté entre 1 y 20.";
         return;
     }
-
-    // Obtener precio unitario mediante switch (RF-02, RF-04)
     const precioUnitario = obtenerPrecioBebida(bebida);
     let nombreBebidaTexto = obtenerNombreBebida(bebida);
 
-    // Procesamiento y cálculos (subtotal y descuento)
     const subtotal = cantidad * precioUnitario;
     let descuento = 0;
     
-    // Condicional para aplicar 10% de descuento si pide más de 5 tazas
     if (cantidad > 5) {
         descuento = subtotal * 0.10;
     }
     const total = subtotal - descuento;
 
-    // Mostrar resultados (RF-06)
     divResultado.className = "resultado exito";
     divResultado.innerHTML = `
         <strong>Invitado:</strong> ${nombre}<br>
@@ -103,7 +85,6 @@ formMerienda.addEventListener('submit', function(event) {
     `;
 });
 
-// Funciones propias para el Ejercicio 2 (RF-07)
 function obtenerPrecioBebida(tipo) {
     switch (tipo) {
         case 'te': return 10;
@@ -123,8 +104,6 @@ function obtenerNombreBebida(tipo) {
         default: return "Desconocida";
     }
 }
-
-
 // ==========================================
 // EJERCICIO 3: El desafío de la Reina de Corazones
 // ==========================================
@@ -149,7 +128,6 @@ formReina.addEventListener('submit', function(event) {
     let sumaPares = 0;
     let sumaImpares = 0;
 
-    // Estructura repetitiva for (RF-02, RF-04)
     for (let i = 1; i <= limite; i++) {
         let esPar = (i % 2 === 0);
         if (esPar) {
@@ -163,7 +141,6 @@ formReina.addEventListener('submit', function(event) {
         }
     }
 
-    // Condicional para determinar qué grupo tiene mayor suma
     let mensajeMayorSuma = "";
     if (sumaPares > sumaImpares) {
         mensajeMayorSuma = "El grupo de números **Pares** tiene la mayor suma acumulada.";
@@ -173,7 +150,6 @@ formReina.addEventListener('submit', function(event) {
         mensajeMayorSuma = "¡Empate exacto! Ambos grupos suman lo mismo.";
     }
 
-    // Mostrar resultados (RF-06)
     divResultado.className = "resultado exito";
     divResultado.innerHTML = `
         <strong>Límite analizado:</strong> ${limite} cartas<br>
