@@ -4,8 +4,8 @@
 **Materia:** Programación Web I  
 
 ## Enlaces de Entrega Obligatorios
-* **Página Publicada (GitHub Pages):** [https://yass-gg.github.io/alicia/]
-* **Repositorio Git (GitHub):** [https://github.com/yass-gg/alicia.git]
+* **Página Publicada (GitHub Pages):** [https://yass-ui.github.io/alicia/]
+* **Repositorio Git (GitHub):** [https://github.com/Yass-ui/alicia.git]
 * **Video Explicativo:** [Pega aquí el enlace de tu video de YouTube o Drive]
 
 ## Descripción del Proyecto
